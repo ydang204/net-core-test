@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center">
+  <div
+    *ngIf="loading"
+    class="spinner-border text-info d-flex align-items-center justify-content-center"
+  ></div>
+  <div *ngIf="isSuccess" class="d-flex justify-content-center">
+    <button
+      [disabled]="loading"
+      class="btn btn-primary"
+      [routerLink]="['/auth/login']"
+    >
+      <span
+        *ngIf="loading"
+        class="spinner-border spinner-border-sm mr-1"
+      ></span>
+      Login
+    </button>
+  </div>
+</div>
